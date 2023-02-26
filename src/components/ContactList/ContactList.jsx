@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ContactListItem, DeleteBtn } from './ContactList.styled';
 
 class ContactList extends Component {
   render() {
@@ -7,17 +8,17 @@ class ContactList extends Component {
       <ul>
         {this.props.contacts.map(contact => {
           return (
-            <li key={contact.id}>
+            <ContactListItem key={contact.id}>
               {contact.name}: {contact.number}
-              <button
+              <DeleteBtn
                 type="button"
                 onClick={() => {
                   this.props.onDeleteContact(contact.id);
                 }}
               >
                 Delete
-              </button>
-            </li>
+              </DeleteBtn>
+            </ContactListItem>
           );
         })}
       </ul>

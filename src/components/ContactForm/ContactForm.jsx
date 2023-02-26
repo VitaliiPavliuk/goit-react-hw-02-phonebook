@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ContactFormSt, AddBtn } from './ContactForm.styled';
 
 class ContactForm extends Component {
   state = {
@@ -33,7 +34,7 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <ContactFormSt onSubmit={this.handleSubmit}>
         <label>
           <p>Name</p>
           <input
@@ -56,8 +57,9 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button type="submit">Add contact</button>
-      </form>
+        <br />
+        <AddBtn type="submit">Add contact</AddBtn>
+      </ContactFormSt>
     );
   }
 }

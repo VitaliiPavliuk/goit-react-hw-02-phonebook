@@ -50,7 +50,7 @@ class App extends Component {
     );
 
     return (
-      <div>
+      <div style={{ margin: 20 }}>
         <h1>Phonebook</h1>
         <ContactForm onAddContact={this.onAddContact} />
 
