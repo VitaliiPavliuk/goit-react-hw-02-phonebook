@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
   filterChange = e => {
@@ -17,3 +18,5 @@ class Filter extends Component {
 }
 
 export default Filter;
+
+Filter.propTypes = { filterContacts: PropTypes.func };

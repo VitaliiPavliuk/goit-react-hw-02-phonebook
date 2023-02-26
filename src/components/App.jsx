@@ -41,7 +41,6 @@ class App extends Component {
   onDeleteContact = contactId => {
     this.setState({
       contacts: this.state.contacts.filter(contact => contact.id !== contactId),
-      // filter: this.state.filter.filter(contact => contact.id !== contactId),
     });
   };
 
@@ -65,22 +64,5 @@ class App extends Component {
     );
   }
 }
-
-// export const App = () => {
-//   return (
-//     <div
-//     // style={{
-//     //   height: '100vh',
-//     //   display: 'flex',
-//     //   justifyContent: 'center',
-//     //   alignItems: 'center',
-//     //   fontSize: 40,
-//     //   color: '#010101'
-//     // }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
 
 export default App;
