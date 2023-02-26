@@ -8,7 +8,7 @@ class ContactForm extends Component {
 
   handleInputChange = ({ target: { name, value } }) => {
     this.setState({
-      [name]: value,
+      [name]: value.trim(),
     });
   };
 
